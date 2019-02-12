@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && ng serve -o",
-    "postinstall": "ng build --prod"
+    "postinstall": "ng build  --aot --prod"
   },
   "private": true,
   "dependencies": {
@@ -17,6 +17,8 @@
     "@angular/cdk": "^7.3.2",
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
+    "@angular/cli": "~7.2.1",
+    "@angular/compiler-cli": "~7.2.0",
     "@angular/core": "~7.2.0",
     "@angular/forms": "~7.2.0",
     "@angular/material": "^7.3.2",
@@ -32,8 +34,8 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.12.0",
-    "@angular/cli": "~7.2.1",
-    "@angular/compiler-cli": "~7.2.0",
+    
+   
     "@angular/language-service": "~7.2.0",
     "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
