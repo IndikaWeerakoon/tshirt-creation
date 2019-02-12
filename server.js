@@ -9,7 +9,7 @@ const app = express();
 //app.use(cors());
 
 // Serve only the static files form the dist directory
-app.use(express.static(path.join(__dirname, 'dist/NewLook-T')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/dist/NewLook-T/index.html'));
