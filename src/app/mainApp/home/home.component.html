@@ -1,74 +1,37 @@
 <div>
-    <header>
-      <div id="carouselExampleIndicators" style="padding: 0;margin: 0;" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active" id="one">
-            <img src="/assets/images/wall2.jpg" class="d-block w-100" alt="This is first Carousal image">
-          </div>
-          <div class="carousel-item" id="two">
-            <img src="/assets/images/wall3.jpg" class="d-block w-100" alt="this is wall 2">
-          </div>
-          <div class="carousel-item" id="three">
-            <img src="/assets/images/wall4.jpg" class="d-block w-100" alt="This is wall 3">
-          </div>
+  <div class="header">
+     <div class="overlay">
+       <div class ="inner-wrap text-center">
+          <h2>Underground Printing</h2>
+          <h1 class="title">We Print Custom <span class="no-wrap">T-Shirts &amp; More</span></h1>
+       </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-
-    </header>
-    <div class="card-plan">
+     <div></div>
+  </div>
+  <div class="card-plan topquot text-center">
+    <div class="card-body">
+        <h3 class="word-style h3">WHAT OUR CUSTOMERS ARE SAYING:</h3>
+        <h5 class="word-style h5">"Outstanding staff. High quality product. Delivered as promised."</h5>
+        <h3 class="word-style h3 high-light"> 100% SATISFACTION GUARANTEED</h3>
+    </div>
+     
+  </div>
+    <div class="card-plan bestSells">
       <div class="card-body">
-          <h5 class="card-title">Our Premium Collection</h5>
-          <hr>
-          <div class="row">
-            <div class="col-md-3">
-              <div class="card">
-                <img src="/assets/images/yellowt.jpg" class="card-img-top" alt="sample t shirt"><hr>
-                <div class="card-body">
-                    <h5 class="card-title">Yellow T-Shirt</h5>
-                    <p class="card-text">This is our premium T-shirt design.that was really famous product of our collection.</p>
-                  </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                  <img src="/assets/images/bluet.jpg" class="card-img-top" alt="sample t shirt"><hr>
-                  <div class="card-body">
-                      <h5 class="card-title">Yellow T-Shirt</h5>
-                      <p class="card-text">This is our premium T-shirt design.that was really famous product of our collection.</p>
-                    </div>
+          <h4 class="card-title text-center">Our Premium Collection</h4>
+          <div class="row" >
+            <div class="col-md-3" *ngFor="let tshirt of tshirts">
+              <div class="card hover">
+                <img [src]="tshirt.src" class="card-img-top" alt="sample t shirt">
+                <div class="card-body manual-card">
+                    <h5 class="card-title">{{tshirt.name}}</h5>
+                    <p class="card-text">{{tshirt.discription}}</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted"><b style="font-family:'Roboto Mono', monospace;">Price: </b>{{tshirt.price}}</small>
                 </div>
               </div>
-              <div class="col-md-3">
-                  <div class="card">
-                    <img src="/assets/images/pinkt.jpg" class="card-img-top" alt="sample t shirt"><hr>
-                    <div class="card-body">
-                        <h5 class="card-title">Yellow T-Shirt</h5>
-                        <p class="card-text">This is our premium T-shirt design.that was really famous product of our collection.</p>
-                      </div>
-                  </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card">
-                      <img src="/assets/images/yellowt.jpg" class="card-img-top" alt="sample t shirt"><hr>
-                      <div class="card-body">
-                          <h5 class="card-title">Yellow T-Shirt</h5>
-                          <p class="card-text">This is our premium T-shirt design.that was really famous product of our collection.</p>
-                        </div>
-                    </div>
-                  </div>
+            </div>             
           </div>
           
       </div>
