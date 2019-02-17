@@ -10,7 +10,7 @@ import { ContactUsComponent } from '../../mainApp/contact-us/contact-us.componen
   declarations: [
     HomeComponent,
     AboutComponent,
-    ContactUsComponent
+    ContactUsComponent,
   ],
   imports: [
     CommonModule,
